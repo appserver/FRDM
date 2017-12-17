@@ -1,0 +1,5 @@
+<?PHP
+
+print 'Hola, mundo...';
+
+?>
