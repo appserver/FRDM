@@ -1,5 +1,3 @@
-Editado en github
-
 Cluster Policy and Local Policy
 
 There are two levels of authorization policy:
