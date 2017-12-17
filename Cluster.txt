@@ -1,0 +1,24 @@
+Cluster Policy and Local Policy
+
+There are two levels of authorization policy:
+
+Cluster policy
+	
+
+Roles and bindings that are applicable across all projects. Roles that exist in the cluster policy are considered cluster roles. Cluster bindings can only reference cluster roles.
+
+Local policy
+	
+
+Roles and bindings that are scoped to a given project. Roles that exist only in a local policy are considered local roles. Local bindings can reference both cluster and local roles.
+
+This two-level hierarchy allows re-usability over multiple projects through the cluster policy while allowing customization inside of individual projects through local policies.
+
+During evaluation, both the cluster bindings and the local bindings are used. For example:
+
+    Cluster-wide "allow" rules are checked.
+
+    Locally-bound "allow" rules are checked.
+
+    Deny by default.
+
